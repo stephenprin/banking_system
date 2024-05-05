@@ -126,7 +126,7 @@
   }
 
   .total-balance-label {
-    @apply text-14 font-medium text-gray-600;
+    @apply text-14 font-medium text-gray-400;
   }
 
   .total-balance-amount {
@@ -217,7 +217,7 @@
   }
 
   .header-box-subtext {
-    @apply text-14 lg:text-16 font-normal text-gray-600;
+    @apply text-14 lg:text-16 font-normal text-gray-700;
   }
 
   /* Bank Card */
