@@ -16,11 +16,12 @@ const Sidebar = ({user}:SiderbarProps) => {
                 <Image src="/icons/logo.svg" width={35} 
                 height={35} alt="crispbank" className='size-[24px] max-xl:size-14'/>
                 <h1 className='sidebar-logo'>CrispBank</h1>
+                
             </Link>
             {sidebarLinks.map((item) =>{
                 const isActive= pathname===item.route || pathname.startsWith(`${item.route}/`)
                 return(
-                    <Link key={item.label} href={item.imgURL} className={cn('sidebar-link',{
+                    <Link key={item.label} href={item.route} className={cn('sidebar-link',{
                         'bg-bank-gradient':isActive
                     } )}>
                         <div className='relative size-6'>
@@ -33,6 +34,7 @@ const Sidebar = ({user}:SiderbarProps) => {
                         <p className={cn('sidebar-label',{
                             '!text-white':isActive
                         })}>{item.label}</p>
+                        
                     </Link>
                 )
             }

@@ -1,11 +1,14 @@
 import HeaderBox from "@/components/HeaderBox";
+import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import React from "react";
 import CountUp from "react-countup";
 
 const Home = () => {
   const loggedInUser = {
-    name: "Prince",
+    firstName: "Prince",
+    lastName: "Nmezi",
+    email: "nmezi@gmail.com"
   };
   return (
     <section className="home">
@@ -14,7 +17,7 @@ const Home = () => {
           <HeaderBox
             type="greeting"
             title="Welcome"
-            user={loggedInUser?.name || "GuestUser"}
+            user={loggedInUser?.firstName || "GuestUser"}
             subtext="Access and manage your account and transaction efficiently with ease"
           />
 
@@ -27,6 +30,7 @@ const Home = () => {
 
         RECENT TRANSACTION
       </div>
+      <RightSidebar user={loggedInUser} transaction={[]} banks={[{},{}]}/>
     </section>
   );
 };
