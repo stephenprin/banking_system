@@ -19,16 +19,18 @@ const BankCard = ({account, userName, showBalance= true }:CreditCardProps) => {
                   <article className='flex flex-col gap-2'>
                       <div className='flex justify-between'>
                           <h1 className='text-12 font-semibold text-white'>{userName}</h1>
-                          <h1 className='text-12 font-semibold text-white'> ** / **</h1>
+                          <h1 className='text-10 font-semibold text-white'> ●● / ●●</h1>
                       </div>
-                      <p className='text-14 font-semibold tracking-normal text-white'>**** **** **** <span className='text-16'>${account.mask}</span></p>
+                      <p className='text-12 font-semibold tracking-normal text-white'> ●●●● ●●●● ●●●● <span className='text-16'>1234</span></p>
                   </article>
             </div>
             <div className='bank-card_icon'>
               <Image src="/icons/paypass.svg" width={20} height={24} alt="pay"/>
-              <Image src="/icons/mastercard.svg" width={45} height={45} alt="mastercard"/>
+              <Image src="/icons/mastercard.svg" width={45} height={32} alt="mastercard" className='ml-5'/>
             </div>
+              <Image src="/icons/lines.png" width={316} height={190} alt="lines" className='absolute top-0 left-0'/>
         </Link>
+
     </div>
   )
 }
